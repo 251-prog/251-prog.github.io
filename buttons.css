@@ -1,0 +1,18 @@
+/* Shared action tokens. Project styles must not define their own button sizes. */
+:root{--action-height:46px;--action-font:12px;--action-padding:20px;--action-gap:14px;--action-border:#9c80ae;--action-bg:#151118cc;--action-fg:#ebe2f1}
+body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.folio-foot .folio-jump,.replay-hero){
+box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:0;width:auto;height:var(--action-height);min-height:var(--action-height);padding:0 var(--action-padding);gap:var(--action-gap);border:1px solid var(--action-border);border-radius:999px;background:var(--action-bg);color:var(--action-fg)!important;font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif;font-size:var(--action-font)!important;font-weight:400;line-height:1!important;letter-spacing:0;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.folio-foot .folio-jump,.replay-hero):hover{background:#d9bdf61d;border-color:#dcc4ef;color:#fff!important}
+body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-mode,.flick-mode,.jike-end-return,.site-footer-return):focus-visible{outline:2px solid #d9bdf6;outline-offset:4px}
+body :is(.jike-text-link,.jike-explore) .jike-action-icon,body .flick-pill>span{width:18px;height:18px;display:inline-grid;place-items:center;flex:none;font-size:18px;line-height:1}
+body :is(.jike-end-return .jike-action-disc,.site-footer-return .site-footer-disc,.flick-exit>span){box-sizing:border-box;display:grid;place-items:center;width:26px;height:26px;flex:none;border:1px solid #ffffff42;border-radius:50%;font-size:16px;line-height:1}
+body :is(.jike-end-return,.site-footer-return) svg{width:14px;height:14px}
+/* Switching rows have their own shared size and selected state. */
+body :is(.jike-feature-tabs,.flick-tabs){display:grid;gap:6px}
+body :is(.jike-feature-tabs,.flick-tabs) button{box-sizing:border-box;display:flex;align-items:center;min-height:54px;padding:0 16px;gap:14px;border:1px solid #ffffff24;border-radius:999px;background:transparent;font-size:13px;color:#aaa3b0;cursor:pointer}
+body :is(.jike-feature-tabs,.flick-tabs) button:is([aria-selected=true],[aria-pressed=true]){background:#d9bdf617;border-color:#bba3d0;color:#ead5fa}
+body :is(.jike-feature-tabs,.flick-tabs) button:is(:hover,:focus-visible){background:#d9bdf617;border-color:#bba3d0;color:#f5edfa}
+body .flick-tabs button>span,body .jike-tab-indicator{box-sizing:border-box;display:grid;place-items:center;width:22px;height:22px;flex:none;margin-left:auto;border:1px solid #ffffff32;border-radius:50%;font-size:14px;line-height:1}
+body .flick-tabs button:is([aria-selected=true],[aria-pressed=true])>span{background:#d9bdf6;border-color:#d9bdf6;color:#1b1420}
+@media(max-width:720px){:root{--action-height:44px;--action-font:11px;--action-padding:16px;--action-gap:12px}body :is(.jike-feature-tabs,.flick-tabs) button{min-height:46px;padding:0 12px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){body .flick-pill{transition:none}}

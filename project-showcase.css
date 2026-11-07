@@ -1,0 +1,96 @@
+/* Curated project presentation; the complete case remains available in the reader. */
+.project-reader{background:#0d0c10}.reader-layout[hidden],.jike-showcase[hidden]{display:none!important}.reader-mode{color:#d8c5eb!important;font-size:12px!important}.project-reader.is-showcase .reader-menu{display:none}.is-showcase .reader-bar{background:#0d0c10}.jike-showcase{overflow:hidden;background:#0d0c10;color:#f0edf4;--jike-muted:#9b96a2;--jike-line:#ffffff22;--jike-accent:#d9bdf6}.jike-showcase button{font:inherit;color:inherit}.jike-space{max-width:1440px;margin:0 auto;padding:110px 64px}.jike-overline{font:11px monospace!important;letter-spacing:1.8px;color:var(--jike-muted);margin:0 0 26px;line-height:1.7}.jike-showcase h2{font-size:clamp(32px,4.2vw,64px);font-weight:500;letter-spacing:-.045em;line-height:1.3;margin:0}.jike-showcase h2 span{color:var(--jike-accent)}.jike-body{font-size:14px;line-height:2;color:var(--jike-muted)}
+.project-reader:not(.is-showcase) .reader-mode{display:none}
+.jike-opening{padding:28px 48px 0;min-height:calc(100dvh - 76px);display:flex;flex-direction:column;max-width:1800px;margin:auto}.jike-opening-meta,.jike-opening-end{display:flex;justify-content:space-between;align-items:center;font:10px monospace;letter-spacing:1.5px;color:var(--jike-muted)}.jike-hero-grid{display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;flex:1;gap:24px;padding:36px 0 42px;min-height:560px}.jike-hero-copy{padding-left:16px;position:relative;z-index:1}.jike-hero-copy .jike-overline{margin-bottom:26px}.jike-hero-copy h1{font-size:clamp(76px,8vw,128px);letter-spacing:-.055em;line-height:1.05;margin:0;font-weight:600}.jike-hero-copy h1>span{display:block;font-size:clamp(64px,8.2vw,132px);letter-spacing:-.06em;font-weight:500;margin-top:5px}.jike-hero-sub{font-size:24px;line-height:1.6;font-weight:400;color:#bdb7c7;margin:30px 0}.jike-explore{display:flex;align-items:center;gap:36px;background:none;border:0;padding:8px 0;font-size:12px!important}.jike-hero-image{width:100%;aspect-ratio:auto}.jike-hero-image img{position:static;display:block;width:100%;max-width:100%;height:auto;transform:none}.jike-opening-end{padding:22px 16px;border-top:1px solid var(--jike-line);gap:20px}.jike-opening-end i{display:inline-block;width:60px;height:1px;background:#77717f;vertical-align:middle;margin:0 18px}
+.jike-statement{display:grid;grid-template-columns:.65fr 1.7fr .8fr;gap:36px;align-items:start;padding-top:140px;padding-bottom:140px}.jike-statement>.jike-overline{padding-top:10px}.jike-statement h2{font-size:clamp(32px,3.8vw,54px)}.jike-statement .jike-body{margin-top:28px}.jike-statement dl{margin:10px 0 0}.jike-statement dl div{padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--jike-line)}.jike-statement dt{font-size:11px;color:#817b89;margin-bottom:10px}.jike-statement dd{font-size:13px;margin:0;color:#d9d3e0}
+.jike-interface{padding-top:80px;border-top:1px solid var(--jike-line)}.jike-section-heading{margin-bottom:60px}.jike-section-heading .jike-overline{margin-bottom:20px}.jike-feature-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:72px;align-items:start}.jike-feature-copy{padding:24px 0;position:sticky;top:35px}.jike-feature-count{font:34px monospace;margin:0 0 26px;color:#e6def0}.jike-feature-count span{font-size:12px;color:#827b8b}.jike-feature-copy h3{font-size:clamp(24px,2.6vw,36px);font-weight:400;line-height:1.5;letter-spacing:-.03em;margin:0 0 36px}.jike-feature-tabs{display:grid;margin-bottom:28px}.jike-feature-tabs button{border:0;border-bottom:1px solid var(--jike-line);background:none;padding:18px 0;display:flex;align-items:center;gap:18px;text-align:left;font-size:13px;color:#8c8595}.jike-feature-tabs small{font:10px monospace}.jike-feature-tabs button[aria-selected=true]{color:#e4cafb;border-color:#d9bdf6}.jike-text-link{font-size:11px!important;line-height:1.8;background:none;border:0;padding:6px 0;color:#aaa0b6!important}.jike-text-link:hover{color:#eee4f8!important}.jike-feature-panel{position:relative;background:#191919;aspect-ratio:1920/2244;display:flex;align-items:center;overflow:hidden}.jike-crop{position:relative;width:100%;overflow:hidden;line-height:0;flex-shrink:0}.jike-crop>img{display:block;width:100%;height:auto;max-width:none;position:absolute;left:0;top:0}.jike-feature-crop{width:100%}.jike-feature-crop>.jike-crop{width:100%}
+.jike-brand{padding-top:100px}.jike-brand-stack{display:grid;gap:52px}.jike-brand-block{min-width:0}.jike-brand-block-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:20px}.jike-brand-block-heading h3{display:flex;align-items:center;gap:16px;font-size:20px;font-weight:500;line-height:1.5;margin:0}.jike-brand-block-heading small{font:11px monospace;color:var(--jike-muted)}.jike-brand .jike-crop{background:#191919}.jike-applications-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.jike-applications-grid figure{margin:0;min-width:0}.jike-application-visual{aspect-ratio:1920/1349;background:#fff;display:flex;align-items:center;overflow:hidden}.jike-applications-grid figcaption{font-size:12px;color:var(--jike-muted);margin-top:16px;line-height:1.6}
+.jike-process{border-top:1px solid var(--jike-line);padding-top:90px;padding-bottom:100px}.jike-process-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}.jike-process .jike-body{margin:0 0 28px}.jike-process-button{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:22px 0;background:none;border:0;border-top:1px solid #766881;border-bottom:1px solid #766881;text-align:left;width:100%;font-size:18px!important}.jike-process-button small{display:block;font-size:11px;color:var(--jike-muted);margin-top:10px}.jike-process-index{display:flex;justify-content:space-between;gap:16px;margin-top:70px;font-size:12px;color:#8e859b}.jike-ending{border-top:1px solid var(--jike-line);padding-top:70px;padding-bottom:36px}.jike-end-return{background:none;border:0;padding:0;width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;font-size:clamp(28px,5vw,70px)!important;letter-spacing:-.045em;line-height:1.5}.jike-ending>div{display:flex;align-items:center;justify-content:space-between;margin-top:70px;color:var(--jike-muted);font:10px monospace;letter-spacing:1px}
+@media(prefers-reduced-motion:no-preference){.jike-showcase [data-show-section]{opacity:0;transform:translateY(24px);transition:opacity .65s,transform .65s}.jike-showcase [data-show-section].is-visible{opacity:1;transform:none}}
+@media(min-width:1700px){.jike-hero-image{width:100%;aspect-ratio:auto}.jike-hero-grid{max-height:1000px}}
+@media(max-width:1100px){.jike-space{padding:80px 36px}.jike-opening{padding:24px 32px 0}.jike-hero-grid{grid-template-columns:.7fr 1.3fr;min-height:520px}.jike-hero-copy{padding-left:0}.jike-hero-copy h1{font-size:80px}.jike-hero-copy h1>span{font-size:86px}.jike-statement{grid-template-columns:1.6fr 1fr;gap:36px}.jike-statement>.jike-overline{grid-column:1/-1;margin-bottom:0}.jike-feature-grid{gap:36px}.jike-process-grid{gap:36px}}
+@media(max-width:720px){.reader-mode{font-size:11px!important}.jike-space{padding:64px 22px}.jike-opening{padding:20px 22px 0;min-height:auto}.jike-opening-meta{font-size:8px;letter-spacing:.7px}.jike-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:28px;padding:34px 0 24px;min-height:0}.jike-hero-copy .jike-overline{font-size:9px!important;margin-bottom:16px}.jike-hero-copy h1{font-size:64px;display:flex;align-items:baseline;gap:22px}.jike-hero-copy h1>span{font-size:64px;margin:0}.jike-hero-sub{font-size:19px;margin:22px 0 0;line-height:1.6}.jike-hero-sub br{display:none}.jike-explore{position:absolute;right:0;bottom:0;gap:12px;font-size:11px!important;padding:0}.jike-hero-image{width:100%;aspect-ratio:auto}.jike-opening-end{padding:18px 0;font-size:8px;letter-spacing:0}.jike-opening-end i{width:20px;margin:0 8px}.jike-statement{display:block}.jike-statement>.jike-overline{margin-bottom:22px;padding:0}.jike-statement dl{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}.jike-statement dl div{margin:0;padding-bottom:14px}.jike-statement dl div:last-child{grid-column:1/-1}.jike-statement .jike-body{font-size:12px;margin-top:20px}.jike-section-heading{margin-bottom:32px}.jike-feature-grid{display:flex;flex-direction:column;gap:24px}.jike-feature-copy{position:static;padding:0;width:100%}.jike-feature-count{display:none}.jike-feature-copy h3{font-size:22px;margin-bottom:22px}.jike-feature-copy h3 br{display:none}.jike-feature-tabs{grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}.jike-feature-tabs button{font-size:11px;justify-content:center;gap:0;padding:13px 0}.jike-feature-tabs small{display:none}.jike-feature-panel{width:100%;min-height:0}.jike-process-grid{grid-template-columns:1fr;gap:26px}.jike-process .jike-body{font-size:12px}.jike-process-index{flex-wrap:wrap;margin-top:36px;justify-content:flex-start;font-size:10px;gap:12px}.jike-ending>div{margin-top:44px;gap:12px;font-size:8px}.jike-ending>div .jike-text-link{font-size:10px!important}.jike-end-return{font-size:29px!important}.is-showcase .reader-title small{display:none}.is-showcase .reader-tools{gap:12px}.reader-bar{gap:10px}.reader-back{font-size:11px!important}}
+
+
+/* Use the complete cover and reserve symbols for essential navigation controls. */
+.jike-explore{display:inline-flex;align-self:flex-start;padding:10px 0;border-bottom:1px solid #8b7c99;transition:color .2s,border-color .2s}
+.jike-explore:hover,.jike-text-link:hover{color:#e4cafb;border-color:#e4cafb}
+
+.jike-process-button{transition:background .2s,border-color .2s}
+.jike-process-button:hover{background:#ffffff04;border-color:#d9bdf6}
+.jike-process-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:24px;border-top:1px solid #ffffff17}
+.jike-process-index span{text-align:left}
+@media(max-width:720px){.jike-explore{padding:3px 0}.jike-process-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+
+/* Visible, restrained affordances for interactive controls. */
+.jike-action-icon{display:block;flex:none;width:18px;height:18px;transition:transform .2s;color:inherit}
+.jike-action-icon.is-down{rotate:90deg}.jike-action-icon.is-up{rotate:-90deg}.jike-action-icon.is-left{rotate:180deg}
+.jike-text-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:9px 14px;border:1px solid #ffffff30;border-radius:6px;color:#d9d1e2!important;line-height:1.5;transition:border-color .2s,background .2s}
+.jike-text-link:hover{background:#d9bdf610;border-color:#bca5d1;color:#f0e7fa!important}
+.jike-explore{display:inline-flex;gap:20px;align-items:center;padding:11px 16px;border:1px solid #83718e;border-radius:6px;background:#d9bdf609}
+.jike-explore:hover{background:#d9bdf617}
+.jike-process-button{padding:22px 24px;border:1px solid #82718f;border-radius:10px;background:#d9bdf608;gap:24px}
+.jike-process-button>span:first-child{min-width:0}.jike-process-button:hover{background:#d9bdf615;border-color:#d9bdf6}
+.jike-action-disc{display:grid;place-items:center;flex:none;width:36px;height:36px;border:1px solid #a78cbb;border-radius:50%;color:#dfc5f4}
+.jike-process-button:hover .jike-action-icon{transform:translateX(2px)}
+.jike-end-return{padding:20px 0;border-bottom:1px solid #ffffff30}.jike-end-return:hover{color:#e4cafb;border-color:#bca5d1}
+.reader-tools .reader-mode{padding:8px 13px;border:1px solid #74617f;border-radius:6px;background:#d9bdf608;line-height:1.4}
+.reader-tools .reader-mode:hover{background:#d9bdf618;border-color:#d9bdf6}
+@media(max-width:720px){.jike-brand-stack{gap:36px}.jike-brand-block-heading{gap:14px;margin-bottom:16px}.jike-brand-block-heading h3{font-size:17px;gap:10px}.jike-brand-block-heading .jike-text-link{font-size:10px!important;padding:8px 10px;gap:7px}.jike-applications-grid{grid-template-columns:1fr;gap:24px}.jike-explore{padding:8px 10px;gap:10px}.jike-process-button{padding:20px 16px;font-size:16px!important;gap:16px}.jike-text-link{padding:8px 12px}.reader-tools .reader-mode{padding:7px 9px}.jike-end-return{font-size:25px!important;gap:16px}}
+
+/* Clickable interface views: a consistent indicator, active fill, and hover/focus feedback. */
+.jike-feature-tabs{gap:4px}
+.jike-feature-tabs button{width:100%;min-height:56px;padding:12px 14px;border:1px solid transparent;border-bottom-color:var(--jike-line);border-radius:6px;gap:14px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.jike-feature-tabs button:hover,.jike-feature-tabs button:focus-visible{background:#d9bdf60c;color:#f0e7f8;border-color:#ffffff30}
+.jike-feature-tabs button[aria-selected=true]{background:#d9bdf614;border-color:#a98ebf;color:#e9d6f8}
+.jike-tab-indicator{width:22px;height:22px;border:1px solid #ffffff32;border-radius:50%;display:grid;place-items:center;margin-left:auto;flex:none;color:#a99aaf;transition:background .2s,border-color .2s,color .2s}
+.jike-tab-indicator .jike-action-icon{width:12px;height:12px}
+.jike-feature-tabs button:hover .jike-tab-indicator,.jike-feature-tabs button:focus-visible .jike-tab-indicator{border-color:#d9bdf6;color:#e9d6f8}
+.jike-feature-tabs button[aria-selected=true] .jike-tab-indicator{background:#d9bdf6;border-color:#d9bdf6;color:#1b1420}
+@media(max-width:720px){.jike-feature-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.jike-feature-tabs button{justify-content:space-between;min-height:46px;padding:10px 12px;border:1px solid #ffffff24;font-size:11px}.jike-tab-indicator{width:18px;height:18px}.jike-tab-indicator .jike-action-icon{width:10px;height:10px}}
+
+/* Every contained action in the case study follows the site's capsule language. */
+.jike-text-link,.jike-explore,.jike-process-button,.reader-tools .reader-mode{border-radius:999px}
+.jike-feature-tabs button{border-radius:999px}
+
+/* One visual system for case-study action pills; scale changes only with context. */
+.jike-text-link,.reader-tools .reader-mode{
+  min-height:42px;padding:0 18px;border-color:#9c80ae;background:#151118cc;color:#ebe2f1!important
+}
+.jike-explore{min-width:168px;min-height:56px;padding:0 22px;justify-content:center;gap:14px;border-color:#9c80ae;background:#151118cc;color:#ebe2f1}
+.jike-process-button{min-height:64px;padding:0 24px;border-color:#9c80ae;background:#151118cc}
+.jike-text-link:hover,.reader-tools .reader-mode:hover,.jike-explore:hover,.jike-process-button:hover{background:#d9bdf61d;border-color:#dcc4ef;color:#fff!important}
+@media(max-width:720px){.jike-text-link,.reader-tools .reader-mode{min-height:38px;padding:0 14px}.jike-explore{min-width:142px;min-height:44px;padding:0 16px}.jike-process-button{min-height:58px;padding:0 20px}}
+
+/* The image lightbox trigger is an action too, so it stays a pill rather than
+   becoming an unrelated circular control. */
+
+
+/* Project presentation belongs to the same site title system. */
+.jike-hero-copy h1,.jike-hero-copy h1>span,.jike-showcase h2{
+  font-size:var(--chapter-title-size);
+  font-weight:500;
+  line-height:1.15;
+  letter-spacing:-.055em
+}
+
+/* The reader header already opens the complete process; finish with one clear exit. */
+.jike-ending{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:38px;padding-bottom:42px}
+.jike-ending .jike-overline{margin:0}
+.jike-end-return{width:auto;min-height:48px;padding:0 16px 0 20px;gap:18px;border:1px solid #9c80ae;border-radius:999px;font-size:13px!important;line-height:1.2;letter-spacing:0;white-space:nowrap}
+.jike-end-return .jike-action-disc{width:26px;height:26px;border-color:#ffffff42}
+.jike-end-return .jike-action-icon{width:14px;height:14px}
+@media(max-width:720px){.jike-ending{padding-top:26px;padding-bottom:30px}.jike-end-return{min-height:44px;padding:0 12px 0 15px;font-size:11px!important;gap:8px}}
+
+/* Interface showcase continues the site's left-right visual rhythm. */
+@media(min-width:721px){
+  .jike-feature-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}
+  .jike-feature-panel{grid-column:1;grid-row:1}
+  .jike-feature-copy{grid-column:2;grid-row:1;top:108px}
+}
+
+/* Keep a modest gap before brand work; the design explanation stays with the interface choices. */
+@media(min-width:721px){
+  .jike-interface{padding-bottom:52px}
+  .jike-brand{padding-top:72px}
+}

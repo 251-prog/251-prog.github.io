@@ -1,0 +1,44 @@
+/* A consistent visual language for actions across all four sections. */
+.wordmark{width:max-content;border-radius:22px;padding:5px 8px;margin:-5px -8px;transition:background .2s,color .2s}
+.wordmark:hover,.wordmark:focus-visible{background:#d9bdf616;color:#fff}
+.capsule a:hover,.capsule a:focus-visible{background:#d9bdf620;color:#fff}
+.capsule a.is-active:hover,.capsule a.is-active:focus-visible{background:#f4f0f7;color:#16111b}
+.hero-actions a.quiet-link,.future-actions button.quiet-link{display:inline-flex;align-items:center;min-height:40px;padding:8px 12px;border:1px solid #ffffff38;border-radius:22px;transition:color .2s,background .2s,border-color .2s}
+.hero-actions a.quiet-link:hover,.hero-actions a.quiet-link:focus-visible,.future-actions button.quiet-link:hover,.future-actions button.quiet-link:focus-visible{background:#d9bdf619;border-color:#cba9e5;color:#f1e7fa}
+.journey .timeline-item{position:relative;padding-right:12px;cursor:pointer;transition:color .2s,background .2s,border-color .2s}
+.journey .timeline-item:hover,.journey .timeline-item:focus-visible{background:#d9bdf610;border-bottom-color:#ac86c5}
+.journey .timeline-item.is-active{background:#d9bdf614;border-bottom-color:#b986d6}
+.journey .timeline-item b{font:400 10px 'PingFang SC','Microsoft YaHei',sans-serif;color:#bfb1cb;border:1px solid #766580;border-radius:20px;padding:4px 8px;white-space:nowrap}
+.journey .timeline-item:hover b,.journey .timeline-item:focus-visible b,.journey .timeline-item.is-active b{color:#e9d8f5;border-color:#c4a4db}
+.section-end a,.site-footer a{display:inline-flex;align-items:center;min-height:36px;border-bottom:1px solid #ffffff45;transition:color .2s,border-color .2s,background .2s}
+.section-end a:hover,.section-end a:focus-visible,.site-footer a:hover,.site-footer a:focus-visible{color:#e5cef8;border-color:#d9bdf6}
+.folio-foot .folio-jump{border:1px solid #ffffff4b;border-radius:22px;padding:8px 14px;transition:background .2s,border-color .2s}
+.folio-foot .folio-jump:hover,.folio-foot .folio-jump:focus-visible{background:#d9bdf61b;border-color:#d9bdf6}
+.folio-card{cursor:pointer}
+.folio-card .folio-paper{transition:box-shadow .2s}
+#works .folio-card:is(:hover,:focus-visible) .folio-paper{box-shadow:0 20px 45px #0007,0 0 0 2px #f5e7ff}
+#works .folio-card b{display:block;width:auto;height:auto;top:12px;right:12px;border:0;border-radius:0;background:none;font-size:13px;line-height:1;transition:transform .2s,color .2s}
+#works .folio-card:is(:hover,:focus-visible) b{transform:translate(2px,-2px);color:#6d477f;background:none}
+.replay-hero:is(:hover,:focus-visible){border-color:#d9bdf6;background:#31223d}
+@media(max-width:600px){.journey .timeline-item{padding-right:8px}.journey .timeline-item b{display:block;font-size:9px;padding:3px 6px}.journey .timeline-item span{font-size:10px}.wordmark{margin:-5px -8px}.folio-card .folio-paper{box-shadow:0 10px 24px #0006}#works .folio-card b{width:auto;height:auto;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.wordmark,.capsule a,.journey .timeline-item,.section-end a,.site-footer a,.folio-card .folio-paper,#works .folio-card b{transition:none}}
+
+/* Company switching uses the same outlined/filled round arrow as project view tabs. */
+.journey .timeline-item b{display:grid;place-items:center;width:26px;height:26px;padding:0;flex:none;border:1px solid #5b5261;border-radius:50%;color:#a69aaf;background:transparent;font:16px/1 Manrope,'PingFang SC',sans-serif;transition:background .2s,color .2s,border-color .2s}
+.journey .timeline-item:hover b,.journey .timeline-item:focus-visible b{border-color:#bd9bd4;color:#e6cff6;background:#d9bdf61a}
+.journey .timeline-item.is-active b{border-color:#d9bdf6;color:#1b1420;background:#d9bdf6}
+@media(max-width:600px){.journey .timeline-item b{display:grid;width:23px;height:23px;padding:0;font-size:14px}}
+
+.journey .timeline-item b svg{display:block;width:14px;height:14px}
+@media(max-width:600px){.journey .timeline-item b svg{width:12px;height:12px}}
+
+/* Secondary actions share one outline-pill system across the main site. */
+.hero-actions a.quiet-link,.future-actions button.quiet-link,.folio-foot .folio-jump,.replay-hero{
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;
+  border:1px solid #9c80ae;border-radius:999px;background:#151118cc;color:#ebe2f1;
+  font-size:12px;line-height:1;transition:background .2s,border-color .2s,color .2s,transform .2s
+}
+.hero-actions a.quiet-link:hover,.hero-actions a.quiet-link:focus-visible,.future-actions button.quiet-link:hover,.future-actions button.quiet-link:focus-visible,.folio-foot .folio-jump:hover,.folio-foot .folio-jump:focus-visible,.replay-hero:hover,.replay-hero:focus-visible{
+  background:#d9bdf61d;border-color:#dcc4ef;color:#fff;transform:translateY(-2px)
+}
+@media(max-width:600px){.hero-actions a.quiet-link,.future-actions button.quiet-link,.folio-foot .folio-jump{min-height:42px;padding:0 16px}.replay-hero{min-height:36px;padding:0 13px}}
