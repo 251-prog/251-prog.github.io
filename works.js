@@ -1,4 +1,4 @@
-/* The local Three.js bundle and image data are loaded by index.html before this script. */
+/* works-loader.js loads Three.js first; embedded textures are only needed for file://. */
 (()=>{
 const THREE = window.THREE;
 if (!THREE) return;
@@ -64,7 +64,7 @@ void main(){
   gl_FragColor=vec4(mix(c,vec3(1.),edge*.1),a);
 }`;
 const cards = buttons.map((button, i) => {
-  const tex = new THREE.TextureLoader().load(window.PORTFOLIO_COVERS[i] || button.querySelector('img').src, () => {
+  const tex = new THREE.TextureLoader().load(window.PORTFOLIO_COVERS?.[i] || button.querySelector('img').src, () => {
     mat.uniforms.ready.value = 1;
   });
   const geo = new THREE.PlaneGeometry(1, 1, NX, NY);

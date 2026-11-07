@@ -5,7 +5,7 @@
     ['品牌与 IP',4],['界面展示',6],['页面总览',9]
   ];
   const descriptions = ['项目封面与项目介绍','竞品分析与用户画像','色彩、字体与图标规范','产品原型','品牌设计与应用','角色 IP 与空状态','界面设计与首页介绍','核心功能界面','课程与社区界面','全部页面与结语'];
-  const image=(n)=>`assets/projects/jike-detail/${String(n).padStart(2,'0')}.${n===6?'png?v=2210754e':'webp'}`;
+  const image=(n)=>`assets/projects/jike-detail/${String(n).padStart(2,'0')}.webp`;
   const reader = document.createElement('dialog');
   reader.className='project-reader';
   reader.setAttribute('aria-labelledby','reader-title');

@@ -3,7 +3,7 @@
   const scroll=reader.querySelector('.reader-scroll');
   const detail=reader.querySelector('.reader-layout');
   const calm=matchMedia('(prefers-reduced-motion:reduce)');
-  const image=(n)=>`assets/projects/jike-detail/${String(n).padStart(2,'0')}.${n===6?'png?v=2210754e':'webp'}`;
+  const image=(n)=>`assets/projects/jike-detail/${String(n).padStart(2,'0')}.webp`;
   function crop(n,y,h,alt,cls=''){
     return `<div class="jike-crop ${cls}" style="aspect-ratio:1920/${h}"><img src="${image(n)}" alt="${alt}" loading="lazy" style="transform:translateY(-${y/[2947,2814,3880,2379,3971,4304,3631,4875,5676,5491][n-1]*100}%)"></div>`;
   }
@@ -14,7 +14,7 @@
       <div class="jike-opening-meta"><span>SELECTED PROJECT / 01</span><span>UI DESIGN · BRAND · IP</span></div>
       <div class="jike-hero-grid">
         <div class="jike-hero-copy"><p class="jike-overline">在线教育 · 移动端体验</p><h1>极课<span>JIKE</span></h1><p class="jike-hero-sub">让学习，<br>更进一步。</p><button class="jike-explore" type="button" data-show-anchor="jike-interface">探索项目</button></div>
-        <div class="jike-hero-image"><img src="assets/projects/jike.png" alt="极课学习 App 界面设计" width="1920" height="1313" fetchpriority="high"></div>
+        <div class="jike-hero-image"><img src="assets/projects/jike.webp" alt="极课学习 App 界面设计" width="1920" height="1313" loading="lazy"></div>
       </div>
       <div class="jike-opening-end"><span>杨化超 / UI 设计作品</span><span>01 — 03 <i></i> SCROLL TO EXPLORE</span></div>
     </section>

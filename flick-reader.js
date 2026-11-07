@@ -2,7 +2,7 @@
   const files = [3380, 3223, 11597, 3297, 4519, 3842, 4413, 6800];
   const labels = ['项目介绍', '用户与原型', '品牌与 IP', '设计规范', '首页与会员', '健康计划与发现', '组件展示', '记录与页面总览'];
   const chapters = [['项目介绍',0],['用户与原型',1],['品牌与 IP',2],['设计规范',3],['核心界面',4],['组件与页面',6]];
-  const image = n => `assets/projects/flick-detail/${String(n).padStart(2,'0')}.png`;
+  const image = n => `assets/projects/flick-detail/${String(n).padStart(2,'0')}.webp`;
   const crop = (n,y,h,alt) => `<div class="flick-crop" style="aspect-ratio:1920/${h}"><img src="${image(n)}" alt="${alt}" width="1920" height="${files[n-1]}" loading="lazy" decoding="async" style="transform:translateY(-${y/files[n-1]*100}%)"></div>`;
   const reader = document.createElement('dialog');
   reader.className = 'project-reader flick-reader is-showcase';
@@ -19,7 +19,7 @@
         <section class="flick-cover">
           <div class="flick-cover-meta"><span>SELECTED PROJECT / 02</span><span>UI DESIGN · BRAND · IP</span></div>
           <div class="flick-cover-copy"><h1>轻动<br><span>App.</span></h1><p class="flick-cover-line">让轻运动，<br>更容易开始。</p><button class="flick-pill flick-explore" type="button" data-target="flick-story">探索项目 <span aria-hidden="true">↓</span></button></div>
-          <div class="flick-cover-image"><img src="assets/projects/flick.png" alt="轻动 App 项目完整封面" width="1920" height="1934" fetchpriority="high"></div>
+          <div class="flick-cover-image"><img src="assets/projects/flick.webp" alt="轻动 App 项目完整封面" width="1920" height="1934" loading="lazy"></div>
         </section>
         <section class="flick-section flick-story" id="flick-story">
           <p class="flick-overline">THE IDEA / 项目起点</p>

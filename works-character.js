@@ -52,8 +52,11 @@
   const video = document.createElement('video');
   video.muted=true;
   video.playsInline=true;
-  video.preload='auto';
-  video.src=window.PORTFOLIO_WORKS_VIDEO || 'assets/works-character.mp4';
+  video.preload='none';
+  // Keep the source detached until the visible ribbon has landed.
+  const source=location.protocol==='file:' && window.PORTFOLIO_WORKS_VIDEO
+    ? window.PORTFOLIO_WORKS_VIDEO : 'assets/works-character.mp4';
+  let sourceAttached=false;
   let visible=false;
   let started=false;
   let animation=0;
@@ -76,13 +79,20 @@
       return;
     }
     if (document.hidden) {video.pause();return;}
+    if (!sourceAttached) {
+      sourceAttached=true;
+      video.src=source;
+      video.load();
+    }
+    // loadeddata calls sync again, including the reduced-motion final-frame seek.
+    if (video.readyState<2) return;
     if (!started) {
       started=true;
       video.currentTime=calm.matches && Number.isFinite(video.duration) ? Math.max(0,video.duration-.08) : 0;
     }
     if (calm.matches || video.ended) return;
     video.play().then(() => {
-      if (!visible || document.hidden) {video.pause();return;}
+      if (!visible || document.hidden || (track.classList.contains('has-ribbon') && !track.classList.contains('is-landed'))) {video.pause();return;}
       cancelAnimationFrame(animation);
       draw();
     }).catch(() => {});

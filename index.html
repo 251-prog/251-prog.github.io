@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#09090c">
   <meta name="description" content="杨化超的 UI 设计作品网站：认识我，了解经历，打开作品。">
+  <link rel="icon" href="data:,">
   <title>杨化超 · UI 设计师</title>
   <link rel="stylesheet" href="styles.css?v=future-spacing-6">
   <link rel="stylesheet" href="works.css?v=return-sway-1">
@@ -13,15 +14,11 @@
   <link rel="stylesheet" href="flick-reader.css?v=cover-fit-3">
   <link rel="stylesheet" href="interactions.css?v=site-affordances-5">
   <script src="script.js?v=flick-case-1" defer></script>
-  <script src="project-reader.js?v=jike-ip-3" defer></script>
-  <script src="project-showcase.js?v=jike-ip-3" defer></script>
-  <script src="flick-reader.js?v=brand-crop-2" defer></script>
-  <script src="assets/ribbon/three.global.min.js" defer></script>
-  <script src="assets/ribbon/embedded-covers.js" defer></script>
-  <script src="works.js?v=offline-1" defer></script>
-  <script src="assets/works-character-data.js" defer></script>
-  <script src="works-character.js?v=offline-1" defer></script>
-  <script src="remaining-readers.js?v=2" defer></script>
+  <script src="project-reader.js?v=perf-a-1" defer></script>
+  <script src="project-showcase.js?v=perf-a-1" defer></script>
+  <script src="flick-reader.js?v=perf-a-1" defer></script>
+  <script src="works-loader.js?v=perf-a-1" defer></script>
+  <script src="remaining-readers.js?v=perf-a-1" defer></script>
   <link rel="stylesheet" href="remaining-readers.css?v=3">
   <link rel="stylesheet" href="buttons.css?v=1">
 </head>
@@ -76,7 +73,7 @@
         <div class="journey-grid">
           <div class="journey-visual reveal" aria-label="紫帽银发角色转向履历内容">
             <img class="journey-character" src="assets/journey-greeting-poster.jpg" alt="履历角色视频首帧" loading="lazy">
-            <video class="journey-video" id="journey-video" src="assets/journey-greeting.mp4" poster="assets/journey-greeting-poster.jpg" muted playsinline preload="auto" aria-label="个人履历角色短片"></video>
+            <video class="journey-video" id="journey-video" src="assets/journey-greeting.mp4" poster="assets/journey-greeting-poster.jpg" muted playsinline preload="none" aria-label="个人履历角色短片"></video>
             <div class="journey-visual-top"><span>YANG HUACHAO</span><span>02 / 04</span></div>
             <div class="journey-visual-bottom"><span class="journey-cross" aria-hidden="true">✳</span><span>让设计有表达，<br>也有落地的能力。</span></div>
           </div>
@@ -125,27 +122,27 @@
           <div class="folio-character" aria-hidden="true"><canvas></canvas></div>
           </div>
           <div class="folio-grid" aria-label="六个作品">
-            <button type="button" class="folio-card" data-project="0" data-name="极课" data-original="assets/projects/jike.png" data-focus="0.52" style="--focus:52%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="0" data-name="极课" data-original="assets/projects/jike.webp" data-focus="0.52" style="--focus:52%"><div class="folio-paper">
               <img src="assets/projects/jike.jpg" alt="" loading="lazy">
               <span><small>01</small>极课<b aria-hidden="true">↗</b></span>
             </div></button>
-            <button type="button" class="folio-card" data-project="1" data-name="轻动 App" data-original="assets/projects/flick.png" data-focus="0.23" style="--focus:23%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="1" data-name="轻动 App" data-original="assets/projects/flick.webp" data-focus="0.23" style="--focus:23%"><div class="folio-paper">
               <img src="assets/projects/flick.jpg" alt="" loading="lazy">
               <span><small>02</small>轻动 App<b aria-hidden="true">↗</b></span>
             </div></button>
-            <button type="button" class="folio-card" data-project="2" data-name="易乓乒 OA" data-original="assets/projects/oa.png" data-focus="0.6" style="--focus:60%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="2" data-name="易乓乒 OA" data-original="assets/projects/oa.webp" data-focus="0.6" style="--focus:60%"><div class="folio-paper">
               <img src="assets/projects/oa-interface.jpg" alt="" loading="lazy">
               <span><small>03</small>易乓乒 OA<b aria-hidden="true">↗</b></span>
             </div></button>
-            <button type="button" class="folio-card" data-project="3" data-name="德丽卡网页" data-original="assets/projects/dlk.png" data-focus="0.5" style="--focus:50%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="3" data-name="德丽卡网页" data-original="assets/projects/dlk.webp" data-focus="0.5" style="--focus:50%"><div class="folio-paper">
               <img src="assets/projects/dlk.jpg" alt="" loading="lazy">
               <span><small>04</small>德丽卡网页<b aria-hidden="true">↗</b></span>
             </div></button>
-            <button type="button" class="folio-card" data-project="4" data-name="燃脂战，赢好礼" data-original="assets/projects/campaign.png" data-focus="0.55" style="--focus:55%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="4" data-name="燃脂战，赢好礼" data-original="assets/projects/campaign.webp" data-focus="0.55" style="--focus:55%"><div class="folio-paper">
               <img src="assets/projects/campaign.jpg" alt="" loading="lazy">
               <span><small>05</small>燃脂战，赢好礼<b aria-hidden="true">↗</b></span>
             </div></button>
-            <button type="button" class="folio-card" data-project="5" data-name="轻食燃脂新尚" data-original="assets/projects/lightfood.png" data-focus="0.48" style="--focus:48%"><div class="folio-paper">
+            <button type="button" class="folio-card" data-project="5" data-name="轻食燃脂新尚" data-original="assets/projects/lightfood.webp" data-focus="0.48" style="--focus:48%"><div class="folio-paper">
               <img src="assets/projects/lightfood-people.jpg" data-text-cover="assets/projects/lightfood-type.jpg" alt="" loading="lazy">
               <span><small>06</small>轻食燃脂新尚<b aria-hidden="true">↗</b></span>
             </div></button>
