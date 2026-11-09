@@ -6,7 +6,7 @@
   const sources = [
     'assets/ribbon/three.global.min.js',
     ...(local ? ['assets/ribbon/embedded-covers.js?v=perf-a-1'] : []),
-    'works.js?v=icons-b-1',
+    'works.js?v=works-replay-1',
     ...(local ? ['assets/works-character-data.js?v=perf-a-1'] : []),
     'works-character.js?v=perf-a-1',
   ];

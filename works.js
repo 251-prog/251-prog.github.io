@@ -150,8 +150,8 @@ function draw(timestamp) {
       `translateY(${remaining * -65}px) rotate(${remaining * (c.i % 2 ? 8 : -8)}deg) scale(${1 - remaining * .16})`);
   }
   track.classList.toggle('is-landed',landed);
+  jump.classList.toggle('is-ready',landed);
   gallery.inert = !landed;
-  jump.innerHTML = landed ? '重播动画 ' + window.portfolioIcon('refresh') : '跳过动画 ' + window.portfolioIcon('right');
   renderer.render(scene,camera);
   if (!landed) raf = requestAnimationFrame(draw);
 }
@@ -182,12 +182,12 @@ new IntersectionObserver(([entry]) => {
 document.addEventListener('visibilitychange', updateVisibility);
 new ResizeObserver(resize).observe(stage);
 jump.addEventListener('click', () => {
-  p = track.classList.contains('is-landed') ? 0 : finish;
-  if (p === 0) {
-    track.classList.remove('is-landed');
-    gallery.scrollLeft = 0;
-    buttons.forEach(card => card.style.removeProperty('--arrive-opacity'));
-  }
+  if (!track.classList.contains('is-landed')) return;
+  p = 0;
+  track.classList.remove('is-landed');
+  jump.classList.remove('is-ready');
+  gallery.scrollLeft = 0;
+  buttons.forEach(card => card.style.removeProperty('--arrive-opacity'));
   updateVisibility();
 });
 canvas.addEventListener('webglcontextlost',()=>{
