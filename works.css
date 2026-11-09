@@ -68,7 +68,7 @@
 }
 .folio-card:hover,.folio-card:focus-visible {z-index:1}
 .is-landed .folio-card:hover .folio-paper,.is-landed .folio-card:focus-visible .folio-paper {animation-play-state:paused}
-@media(max-width:960px){
+@media(max-width:720px){
   .folio-grid {grid-template-columns:repeat(6,minmax(144px,1fr));overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#786884 transparent}
 }
 @media(prefers-reduced-motion:reduce){.is-landed .folio-paper {animation:none}}
@@ -133,3 +133,7 @@ img.folio-preview {height:auto;max-height:none}
 /* Only show replay after the entrance animation has landed. */
 .folio-jump:not(.is-ready){opacity:0;visibility:hidden;pointer-events:none}
 .folio-jump.is-ready{opacity:1;visibility:visible;pointer-events:auto}
+
+/* Card content must stay inside the paper edge. */
+.folio-paper{overflow:hidden;grid-template-rows:minmax(0,1fr) 58%}
+.folio-card img{min-height:0;min-width:0}
