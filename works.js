@@ -151,7 +151,7 @@ function draw(timestamp) {
   }
   track.classList.toggle('is-landed',landed);
   gallery.inert = !landed;
-  jump.textContent = landed ? '重播动画 ↻' : '跳过动画 →';
+  jump.innerHTML = landed ? '重播动画 ' + window.portfolioIcon('refresh') : '跳过动画 ' + window.portfolioIcon('right');
   renderer.render(scene,camera);
   if (!landed) raf = requestAnimationFrame(draw);
 }

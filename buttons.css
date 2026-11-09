@@ -1,8 +1,8 @@
 /* Shared action tokens. Project styles must not define their own button sizes. */
-:root{--action-height:46px;--action-font:12px;--action-padding:20px;--action-gap:14px;--action-border:#9c80ae;--action-bg:#151118cc;--action-fg:#ebe2f1}
-body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.folio-foot .folio-jump,.replay-hero){
+:root{--action-height:46px;--action-font:12px;--action-padding:20px;--action-gap:10px;--action-border:#9c80ae;--action-bg:#151118cc;--action-fg:#ebe2f1}
+body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.hero-actions button.quiet-link,.folio-foot .folio-jump,.replay-hero){
 box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:0;width:auto;height:var(--action-height);min-height:var(--action-height);padding:0 var(--action-padding);gap:var(--action-gap);border:1px solid var(--action-border);border-radius:999px;background:var(--action-bg);color:var(--action-fg)!important;font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif;font-size:var(--action-font)!important;font-weight:400;line-height:1!important;letter-spacing:0;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
-body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.folio-foot .folio-jump,.replay-hero):hover{background:#d9bdf61d;border-color:#dcc4ef;color:#fff!important}
+body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-end-return,.site-footer-return,.hero-actions a.quiet-link,.hero-actions button.quiet-link,.folio-foot .folio-jump,.replay-hero):hover{background:#d9bdf61d;border-color:#dcc4ef;color:#fff!important}
 body :is(.jike-text-link,.jike-explore,.flick-pill,.reader-mode,.flick-mode,.jike-end-return,.site-footer-return):focus-visible{outline:2px solid #d9bdf6;outline-offset:4px}
 body :is(.jike-text-link,.jike-explore) .jike-action-icon,body .flick-pill>span{width:18px;height:18px;display:inline-grid;place-items:center;flex:none;font-size:18px;line-height:1}
 body :is(.jike-end-return .jike-action-disc,.site-footer-return .site-footer-disc,.flick-exit>span){box-sizing:border-box;display:grid;place-items:center;width:26px;height:26px;flex:none;border:1px solid #ffffff42;border-radius:50%;font-size:16px;line-height:1}
@@ -14,5 +14,105 @@ body :is(.jike-feature-tabs,.flick-tabs) button:is([aria-selected=true],[aria-pr
 body :is(.jike-feature-tabs,.flick-tabs) button:is(:hover,:focus-visible){background:#d9bdf617;border-color:#bba3d0;color:#f5edfa}
 body .flick-tabs button>span,body .jike-tab-indicator{box-sizing:border-box;display:grid;place-items:center;width:22px;height:22px;flex:none;margin-left:auto;border:1px solid #ffffff32;border-radius:50%;font-size:14px;line-height:1}
 body .flick-tabs button:is([aria-selected=true],[aria-pressed=true])>span{background:#d9bdf6;border-color:#d9bdf6;color:#1b1420}
-@media(max-width:720px){:root{--action-height:44px;--action-font:11px;--action-padding:16px;--action-gap:12px}body :is(.jike-feature-tabs,.flick-tabs) button{min-height:46px;padding:0 12px;font-size:11px}}
+@media(max-width:720px){:root{--action-height:44px;--action-font:11px;--action-padding:16px;--action-gap:8px}body :is(.jike-feature-tabs,.flick-tabs) button{min-height:46px;padding:0 12px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){body .flick-pill{transition:none}}
+/* Shared vector symbols inherit the current text color and font size. */
+.portfolio-icon{display:inline-block;width:1em;height:1em;flex:none;vertical-align:-.12em;overflow:visible}
+
+/* ============================================================
+   Canonical action system — 2026-11-09
+   Scope A: primary / secondary / page-end / switch.
+   Contact methods and dialog close remain intentional exceptions.
+   ============================================================ */
+:root{--action-height:46px;--action-font:12px;--action-padding:20px;--action-gap:10px;--action-border:#9c80ae;--action-bg:#151118cc;--action-fg:#ebe2f1}
+@media (max-width:720px){:root{--action-height:44px;--action-font:11px;--action-padding:16px;--action-gap:8px}}
+
+/* 1. Primary — light fill, otherwise identical geometry to secondary */
+:is(.button.button-light,.reader-footer .reader-return,.reader-footer .flick-return){
+  box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:var(--action-gap)!important;
+  width:auto!important;min-width:0!important;height:var(--action-height)!important;min-height:var(--action-height)!important;
+  padding:0 var(--action-padding)!important;border:0!important;border-radius:999px!important;
+  background:#f4f0f7!important;color:#151018!important;
+  font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif!important;font-size:var(--action-font)!important;font-weight:400!important;line-height:1!important;letter-spacing:0!important;
+  white-space:nowrap!important;text-decoration:none!important;cursor:pointer!important;
+}
+:is(.button.button-light,.reader-footer .reader-return,.reader-footer .flick-return):is(:hover,:focus-visible){background:#d9bdf6!important;color:#151018!important}
+.button.button-light .button-label{font-size:inherit!important;line-height:1!important;transform:none!important;white-space:nowrap!important}
+.button.button-light .button-arrow{position:static!important;top:auto!important;right:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;height:auto!important;font-size:inherit!important;line-height:1!important;transform:none!important}
+.button.button-light .button-arrow svg,.button.button-light>.portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important;flex:none!important}
+
+/* 2. Secondary — outline, same geometry; includes page-end capsules */
+:is(.hero-actions a.quiet-link,.hero-actions button.quiet-link,.future-actions button.quiet-link,.folio-foot .folio-jump,.replay-hero,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-text-link,.jike-explore,.flick-pill,.reader-footer .reader-top,.flick-top,.site-footer-return,.jike-end-return){
+  box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:var(--action-gap)!important;
+  width:auto!important;min-width:0!important;height:var(--action-height)!important;min-height:var(--action-height)!important;
+  padding:0 var(--action-padding)!important;border:1px solid var(--action-border)!important;border-radius:999px!important;
+  background:var(--action-bg)!important;color:var(--action-fg)!important;
+  font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif!important;font-size:var(--action-font)!important;font-weight:400!important;line-height:1!important;letter-spacing:0!important;
+  white-space:nowrap!important;text-decoration:none!important;cursor:pointer!important;
+}
+:is(.hero-actions a.quiet-link,.hero-actions button.quiet-link,.future-actions button.quiet-link,.folio-foot .folio-jump,.replay-hero,.reader-tools .reader-mode,.reader-tools .flick-mode,.jike-text-link,.jike-explore,.flick-pill,.reader-footer .reader-top,.flick-top,.site-footer-return,.jike-end-return):is(:hover,:focus-visible){background:#d9bdf61d!important;border-color:#dcc4ef!important;color:#fff!important}
+
+/* 3. Text-action icons: 18px, 1.6 stroke, no ring */
+:is(.hero-actions a.quiet-link,.hero-actions button.quiet-link,.future-actions button.quiet-link,.replay-hero,.folio-foot .folio-jump) .portfolio-icon,
+.jike-text-link .jike-action-icon,.jike-explore .jike-action-icon{width:18px!important;height:18px!important;stroke-width:1.6!important;flex:none!important}
+.flick-pill>span:not(.flick-exit>span){width:18px!important;height:18px!important;font-size:18px!important;line-height:1!important;display:inline-grid!important;place-items:center!important}
+.flick-pill>span svg{width:18px!important;height:18px!important;stroke-width:1.6!important}
+
+/* 4. Page-end returns: no ring, 18px arrow. Only switch lists keep rings. */
+:is(.site-footer-return .site-footer-disc,.jike-end-return .jike-action-disc,.flick-exit>span){
+  width:18px!important;height:18px!important;border:0!important;border-radius:0!important;background:none!important;
+  display:grid!important;place-items:center!important;flex:none!important;font-size:18px!important;line-height:1!important;margin-left:0!important;
+}
+:is(.site-footer-return,.jike-end-return) svg,.flick-exit>span svg{width:18px!important;height:18px!important;stroke-width:1.6!important}
+
+/* 5. Switch rows: 54/13/16/14; 22px ring with 14px icon */
+:is(.jike-feature-tabs,.flick-tabs) button{
+  box-sizing:border-box!important;min-height:54px!important;padding:0 16px!important;gap:14px!important;
+  font-size:13px!important;border-radius:999px!important;
+}
+.jike-tab-indicator,.flick-tabs button>span{
+  width:22px!important;height:22px!important;display:grid!important;place-items:center!important;flex:none!important;margin-left:auto!important;
+  border:1px solid #ffffff32!important;border-radius:50%!important;font-size:14px!important;line-height:1!important;
+}
+.jike-tab-indicator .jike-action-icon,.flick-tabs button>span svg{width:14px!important;height:14px!important;stroke-width:1.6!important}
+@media(max-width:720px){
+  :is(.jike-feature-tabs,.flick-tabs) button{min-height:46px!important;padding:0 12px!important;gap:12px!important;font-size:11px!important}
+  .jike-tab-indicator,.flick-tabs button>span{width:22px!important;height:22px!important}
+}
+
+/* 6. Experience switch list matches the 22px switch ring */
+.journey .timeline-item b{
+  width:22px!important;height:22px!important;display:grid!important;place-items:center!important;padding:0!important;
+  border:1px solid #5b5261!important;border-radius:50%!important;font-size:14px!important;line-height:1!important;flex:none!important;
+}
+.journey .timeline-item b svg{width:14px!important;height:14px!important;stroke-width:1.6!important}
+
+/* 7. Contact stays its own 48px component (Scope A exception); only icon stroke is normalized */
+.contact-method .portfolio-icon{stroke-width:1.6!important}
+
+/* 8. Icon normalization — one viewBox, one stroke, one alignment */
+.reader-back .portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important}
+:is(.reader-footer .reader-return,.reader-footer .flick-return,.reader-footer .reader-top,.reader-footer .flick-top) .portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important}
+.dialog-close{display:grid!important;place-items:center!important;padding:0!important}
+.dialog-close .portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important}
+.contact-method .portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important}
+.folio-foot>a{display:inline-flex!important;align-items:center!important;gap:10px!important;font-size:12px!important}
+.folio-foot>a .portfolio-icon{width:18px!important;height:18px!important;stroke-width:1.6!important}
+.hero-tail .portfolio-icon{width:14px!important;height:14px!important;stroke-width:1.6!important}
+.reader-toc-chevron{width:14px!important;height:14px!important;stroke-width:1.6!important;flex:none!important;color:#82748e}
+.reader-toc nav button[aria-current] .reader-toc-chevron{color:#d9bdf6}
+.journey-metrics strong .metric-mark{width:17px!important;height:17px!important;display:inline-block!important;vertical-align:5px!important;margin-left:5px!important;overflow:visible!important}
+.journey-metrics strong .metric-mark.metric-arrow{vertical-align:5px!important;margin:0 5px!important}
+.journey-metrics strong small{font-size:13px!important;font-weight:400!important;letter-spacing:0!important;margin-left:4px!important;color:inherit!important;vertical-align:baseline!important}
+@media(max-width:600px){
+  .journey-metrics strong .metric-mark{width:15px!important;height:15px!important}
+  .journey-metrics strong .metric-mark.metric-arrow{vertical-align:4px!important;margin:0 4px!important}
+  .journey-metrics strong small{font-size:12px!important}
+}
+
+/* 9. Optical size: circular refresh icons fill the 24 grid; render them slightly smaller. */
+.button.button-light .button-arrow svg[data-icon="refresh"],
+.hero-actions button.quiet-link .portfolio-icon[data-icon="refresh"],
+.hero .replay-hero .portfolio-icon[data-icon="refresh"],
+.folio-foot .folio-jump .portfolio-icon[data-icon="refresh"]{width:15px!important;height:15px!important}
+

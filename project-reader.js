@@ -11,7 +11,7 @@
   reader.setAttribute('aria-labelledby','reader-title');
   reader.innerHTML=`
     <header class="reader-bar">
-      <button class="reader-back" type="button"><span aria-hidden="true">←</span> 返回作品</button>
+      <button class="reader-back" type="button">${window.portfolioIcon('left')} 返回作品</button>
       <div class="reader-title"><h2 id="reader-title">极课</h2><small>JIKE / UI DESIGN</small></div>
       <div class="reader-tools"><button class="reader-menu" type="button" aria-expanded="false" aria-controls="reader-toc">目录</button></div>
       <div class="reader-progress" role="progressbar" aria-label="作品阅读进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
@@ -20,7 +20,7 @@
       <div class="reader-layout">
         <article class="reader-pages" aria-label="极课完整设计作品">
           ${heights.map((height,i)=>`<figure class="reader-sheet" id="jike-sheet-${i}"><img data-src="${image(i+1)}" width="1920" height="${height}" alt="极课 · ${descriptions[i]}" decoding="async" loading="${i===0?'eager':'lazy'}"></figure>`).join('')}
-          <footer class="reader-footer"><p>JIKE · END OF PROJECT</p><h3>谢谢看到这里。</h3><div><button class="reader-return" type="button">返回作品文件夹</button><button class="reader-top" type="button">回到顶部</button></div></footer>
+          <footer class="reader-footer"><p>JIKE · END OF PROJECT</p><h3>谢谢看到这里。</h3><div><button class="reader-return" type="button">${window.portfolioIcon('left')} 返回作品文件夹</button><button class="reader-top" type="button">${window.portfolioIcon('up')} 回到顶部</button></div></footer>
         </article>
         <aside class="reader-toc" id="reader-toc"><p class="reader-toc-label">PROJECT INDEX / 项目目录</p><nav aria-label="极课章节">${chapters.map(([name,index],i)=>`<button type="button" data-sheet="${index}" ${i===0?'aria-current="location"':''}><small>${String(i+1).padStart(2,'0')}</small>${name}</button>`).join('')}</nav><div class="reader-position"><strong>01</strong> / 10</div><p class="reader-hint">向下浏览完整作品</p></aside>
       </div>

@@ -45,7 +45,7 @@
     </section>
     <footer class="jike-ending jike-space"><span class="jike-overline">极课 · 作品结束</span><button class="jike-end-return" type="button">返回作品文件夹</button></footer>`;
   scroll.prepend(showcase);reader.classList.add('is-showcase');
-  const actionIcon = (direction='right') => `<svg class="jike-action-icon is-${direction}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+  const actionIcon = (direction='right') => `<svg class="portfolio-icon jike-action-icon is-${direction}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
   showcase.querySelectorAll('.jike-text-link').forEach(button=>button.insertAdjacentHTML('beforeend',actionIcon(button.hasAttribute('data-show-anchor')?'up':'right')));
   showcase.querySelectorAll('[data-feature]').forEach(button=>button.insertAdjacentHTML('beforeend',`<span class="jike-tab-indicator" aria-hidden="true">${actionIcon()}</span>`));
   showcase.querySelector('.jike-explore').insertAdjacentHTML('beforeend',actionIcon('down'));
@@ -54,16 +54,16 @@
   reader.querySelector('.reader-tools').prepend(mode);
   const back=reader.querySelector('.reader-back');
   const returnFromDetail=reader.querySelector('.reader-return');
-  returnFromDetail.textContent='返回项目精选';
+  returnFromDetail.innerHTML=window.portfolioIcon('left')+' 返回项目精选';
   let showcaseScroll=0;
   function setMode(full,index){
     if(full){
       if(reader.classList.contains('is-showcase'))showcaseScroll=scroll.scrollTop;
-      reader.classList.remove('is-showcase');showcase.hidden=true;detail.hidden=false;mode.hidden=true;back.innerHTML='<span aria-hidden="true">←</span> 返回';
+      reader.classList.remove('is-showcase');showcase.hidden=true;detail.hidden=false;mode.hidden=true;back.innerHTML=window.portfolioIcon('left')+' 返回';
       scroll.scrollTo({top:0,behavior:'instant'});
       if(index!==undefined){const sheet=reader.querySelector(`#jike-sheet-${index}`);scroll.scrollTo({top:sheet.getBoundingClientRect().top-scroll.getBoundingClientRect().top+scroll.scrollTop,behavior:'instant'});}
     }else{
-      reader.classList.add('is-showcase');showcase.hidden=false;detail.hidden=true;mode.hidden=false;back.innerHTML='<span aria-hidden="true">←</span> 返回作品';scroll.scrollTo({top:showcaseScroll,behavior:'instant'});
+      reader.classList.add('is-showcase');showcase.hidden=false;detail.hidden=true;mode.hidden=false;back.innerHTML=window.portfolioIcon('left')+' 返回作品';scroll.scrollTo({top:showcaseScroll,behavior:'instant'});
     }
     reader.classList.remove('toc-open');reader.querySelector('.reader-menu').setAttribute('aria-expanded','false');
     scroll.dispatchEvent(new Event('scroll'));

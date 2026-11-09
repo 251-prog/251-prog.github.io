@@ -208,12 +208,12 @@ html{scrollbar-gutter:stable}
 
 /* Direct contact actions use the site's existing capsule language. */
 .contact-methods{display:grid;gap:10px;margin-top:20px}
-.contact-method{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;align-items:center;gap:14px;min-height:48px;padding:9px 18px;border:1px solid #806d91;border-radius:999px;color:var(--fg);text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.contact-method{display:grid;grid-template-columns:44px minmax(0,1fr) 18px;align-items:center;gap:14px;min-height:48px;padding:9px 18px;border:1px solid #806d91;border-radius:999px;color:var(--fg);text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
 .contact-method>span:first-child{font-size:11px;color:var(--muted)}
 .contact-method strong{font-size:13px;font-weight:500;overflow-wrap:anywhere}
 .contact-method>span:last-child{font-size:17px;text-align:right}
 .contact-method:hover,.contact-method:focus-visible{background:#d9bdf610;border-color:#bca5d1;transform:translateY(-2px)}
-@media(max-width:600px){.contact-panel{padding:20px}.contact-method{grid-template-columns:34px minmax(0,1fr) 14px;gap:8px;padding:9px 13px}.contact-method strong{font-size:12px}}
+@media(max-width:600px){.contact-panel{padding:20px}.contact-method{grid-template-columns:34px minmax(0,1fr) 18px;gap:8px;padding:9px 13px}.contact-method strong{font-size:12px}}
 
 /* Contact details stay in the closing page's normal reading flow. */
 .future-content .contact-panel{max-width:720px;margin:42px auto 0;padding:0;border:0;background:none;text-align:center}
@@ -233,3 +233,6 @@ html{scrollbar-gutter:stable}
 .future{min-height:0}
 .future-content{padding-bottom:56px}
 
+/* Wordmark avatar: replace the top-left star with the profile image. */
+.wordmark-icon{overflow:hidden;background:none;padding:0}
+.wordmark-icon img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}

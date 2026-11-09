@@ -17,9 +17,7 @@
 
 /* Persistent affordance for images and chapter jumps in the complete process. */
 .reader-toc nav button{justify-content:space-between;padding-right:12px;cursor:pointer}
-.reader-toc nav button::after{content:'›';font-size:18px;line-height:1;color:#82748e}
 .reader-toc nav button:hover,.reader-toc nav button:focus-visible{background:#ffffff0a;border-left-color:#bba2d1;color:#f1e8f8}
-.reader-toc nav button[aria-current]::after{color:#d9bdf6}
 
 /* The complete-case controls use the same capsule treatment as the rest of the site. */
 .reader-footer button{border-radius:999px}
